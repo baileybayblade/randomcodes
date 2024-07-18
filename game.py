@@ -24,6 +24,8 @@ print('What would you like to do?')
 
 #after the player picks 2, where they should now pick 1 to finish the game properly.
 def main_after_cave():
+    global player_input
+    player_input = ""
     time.sleep(2)
     print('You have returned to the main village.')
     time.sleep(2)
