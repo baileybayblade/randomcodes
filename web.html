@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Post.</title>
+<style>
+    body {
+        height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1515687652280-bf0bb698562a?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    grid-template-columns: 1fr 4fr;
+    gap: 4px;
+    border: 5px outset #69a49b;
+    margin: 25px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .container > div {
+        background-color: rgba(255, 255, 255, 0.94);
+        padding: 10px;
+    }
+    .container > div.header {
+        grid-area: header;
+        text-align: center;
+    }
+    .container > div.menu {
+        grid-area: menu;
+    }
+    .container > div.content {
+        grid-area: content;
+
+    }
+    .container > div.footer {
+        grid-area: footer;
+    }
+    .yay-img {
+        float: left;
+        width: 70px;
+        height: 100%;
+        margin-right: 5px;
+    }
+    .pfp-img {
+        float: left;
+        width: 18px;
+        margin-right: 5px;
+    }
+    img.pfp-img:hover {
+        cursor:pointer;
+    }
+    .info-tiny {
+        font-style: italic;
+        font-size: 12px;
+        margin: 0;
+        color:rgb(156, 156, 156);
+    }
+    .title {
+        text-decoration: underline;
+    }
+    .side {
+        text-decoration: underline;
+        color: #df6c20;
+        font-style: italic;
+    }
+    a {
+        color: #69a49b;
+        text-decoration: none;
+    }
+    a:hover {
+        color:#df6c20;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    p.caption {
+        text-align: center;
+        color: #69a49b;
+        font-style: italic;
+        margin: 0;
+        font-size: smaller;
+    }
+    .for-footer {
+        font-size: 20px;
+        text-align: center;
+    }
+    .follow-button {
+        background-color:#fcd2ab;
+        border: 2px solid #df6c20;
+        border-radius: 4px;
+        color:#4f2e18;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    button.follow-button:hover {
+        font-style: italic;
+        background-color: #69a49b;
+        border: 2px solid #3c6760;
+        color: #243532;
+        cursor:pointer;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #3c6760;
+        top: 0;
+        width: 100%;
+    }
+
+    li.nav {
+        float: left;
+        border-right: 1px solid #bbb;
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li.nav a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+        font-size: small;
+    }
+
+    li.nav a:hover {
+        background-color: #243532;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://img.icons8.com/?size=100&id=QJDSSdakPMaU&format=png&color=000000" class="yay-img" alt="Website Icon">
+            <h2>Welcome to <span style="font-style: italic;text-decoration: underline;color:#df6c20">goosequeen2010</span>'s blog post!</h2>
+            <p class="caption">TIP: CLICK THE "USERNAME" FOR MORE STUFF!</p>
+        </div>
+        <div class="menu">
+            <h3 class="side">RECENT POSTS:</h3>
+            <li><a href="#">What Do People Think of Dragons?</a></li><br>
+            <li><a href="#">Warriors Book Challenge: Day 3</a></li><br>
+            <li><a href="#">Udacity Club: Join now!</a></li><br>
+            <li><a href="#">Poll: Cats, Dogs, Geese, or Horses?</a></li>
+        </div>
+        <div class="content">
+            <ul>
+                <li class="nav"><a href="#">Home</a></li>
+                <li class="nav"><a href="#">About us</a></li>
+                <li class="nav"><a href="#">Login</a></li>
+                <li class="nav"><a href="#">Contact</a></li>
+              </ul>
+              <br><br>
+            <img src="https://img.icons8.com/?size=100&id=83190&format=png&color=000000" class="pfp-img" alt="Profile Picture">
+            <p class="info-tiny">
+                <a href="profile.htm" style="color: #3c6760;">goosequeen2010</a> @the_official_goose_queen
+            </p>
+            <hr>
+            <h2 class="title">My New <span style="font-style: italic;text-decoration: underline;color:#df6c20">Video Game</span> and <span style="font-style: italic;text-decoration: underline;color:#df6c20">Reading</span> Experience.</h2>
+            <img src="https://images.unsplash.com/photo-1547448415-e9f5b28e570d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%;" alt="Imperial Russia">
+            <p class="caption">Imperial Russia.</p>
+            <p>Hello, World! Today, I went to my nearby <span style="font-style: italic;text-decoration: underline;color:#df6c20">Game Club</span> near my house where me and my friends (alongside a few others) can have fun and play fun games with each other.
+                Recently, my friend had suggested that I play <span style="font-style: italic;text-decoration: underline;color:#df6c20">Papers, Please</span>, a puzzle stimulation game made by <span style="font-style: italic;text-decoration: underline;color:#df6c20">Lucas Pope</span>. It follows you, an <span style="font-style: italic;">Immigration Officer</span> in the fictional, dystopian country of Arstotzka. 
+                You have to see if people who enter the checkpoint have all their correct papers or not. If yes, you will let them pass into Arstotzka. If not, you must deny them or else you'll get punished.
+                Once I get back home, I'm gonna give it a try.</p>
+            <p>Other than this new game, I started reading <span style="font-style: italic;text-decoration: underline;color:#df6c20">The Three Musketeers</span>, a classic swashbuckling book written by <span style="font-style: italic;text-decoration: underline;color:#df6c20">Alexandre Dumas</span>. I'm currently on page 394.
+             It revolves around a young Gascon who strives to be a Musketeer, but ends up bumping into three of the best: Athos, Porthos, and Aramis. The novel is filled with romance and tragedy, alongside some funny parts! My copy contains 900+ pages, but I'm determined to finish it.</p>
+             <hr>
+             <h2 class="title" style="font-style: italic;text-decoration: underline;color:#df6c20">Papers, Please.</h2>
+             <i><p>Spoilers ahead!</p></i>
+             <p>The game revolves around you, who's been successfully hired as an Immigration Officer for the city of Arstotzka. The game revolves around checking people's papers to make sure nothing is wrong or missing.
+                If the person's papers are intact, their passport is accepted and they pass. If something is wrong with their papers, you deny them and they leave, unable to enter the country.</p>
+            
+                <p>The game tackles several serious topics, such as terrorism, difficult bureaucracy, poverty, and when and when to not sympathize with those aronud you. You, as a father and husband, must care for your family with your meager payment that you recieve every day,
+                providing them with food, water, medicine, heat, etc. Alongside managing your personal life and work life, the game forces you to make difficult desicions at times. For example, a character named <i>Sergiu</i> shows up during one of the days and asks you to let his lover in.
+                The only problem is that her papers are not complete. If you let her in, you get closer to Sergiu and recieve some money, but you get a warning. If you do not let her in, the half-hearted friendship between you and Sergiu is torn apart, but you do not recieve any warnings and continue your work properly.</p>
+            <p>To read more about  <span style="font-style: italic;text-decoration: underline;color:#df6c20">Papers, please</span>, click <a href="https://en.wikipedia.org/wiki/Papers,_Please">Here</a>. To see the official <i>short film</i> adaptation created by <span style="font-style: italic;text-decoration: underline;color:#df6c20">Nikita Ordynskiy</span> on Youtube, click <a href="https://youtu.be/YFHHGETsxkE?si=86ZQw4ZfQ5vN73YU">Here.</a></p>
+            
+            <hr>
+            
+            <h2 class="title" style="font-style: italic;text-decoration: underline;color:#df6c20">The Three Musketeers.</h2>
+            <i><p>Spoilers ahead!</p></i>
+            <p>Written by <span style="font-style: italic;text-decoration: underline;color:#df6c20">Alexandre Dumas</span>, <i>The Three Musketeers</i> revolves around a young Gascon named D'Artagnan who strives to serve the king as a Musketeer.
+                Although d'Artagnan isn't the sharpest tool in the shed, what makes him stand out is his fierce ambition and determination to keep going forward and prove himself worthy.</p>
+            
+            <p>However, he accidentally bumps into the three best Musketeers: Athos, Porthos, and Aramis; three best friends who have been nicknamed <i>'The Inseperables'</i> with their own flaws and virtues. After d'Artagnan had a nasty fight with a mean man at a local inn (who also stole an important letter of his!),
+            he immediately sets off to Paris to tell the captain of the Musketeers: Monsieur de Treville. Which, despite going smoothly, causes him to duel with The Inseperables instead - and he only wins by sheer luck.</p>
+
+            <p>The rest of the novel revolves around d'Artagnan and his newfound friends going through many ups and downs, from kidnappings, to attempted murders, to successful murders, to seiges, and picnics.</p>
+            <p>To read about  <span style="font-style: italic;text-decoration: underline;color:#df6c20">The Three Musketeers</span>, click <a href="https://en.wikipedia.org/wiki/The_Three_Musketeers">Here</a>.
+            And, if you want to read about  <span style="font-style: italic;text-decoration: underline;color:#df6c20">Alexandre Dumas</span> himself, click <a href="https://en.wikipedia.org/wiki/Alexandre_Dumas">Here</a>.</p>
+            <p>Please check out my <a href="profile.htm">Profile</a> and give me a follow! :D</p>
+            <hr>
+            <img class="pfp-img" src="https://img.icons8.com/?size=100&id=82836&format=png&color=000000">
+            <img class="pfp-img" src="https://img.icons8.com/?size=100&id=87726&format=png&color=000000">
+            <button class="follow-button">Comment</button>
+            <button class="follow-button">Report</button>
+        </div>
+        <div class="footer">
+            <img src="https://img.icons8.com/?size=100&id=QJDSSdakPMaU&format=png&color=000000" class="yay-img" alt="Website Icon">
+            <h2 class="for-footer"><span style="font-style: italic;text-decoration: underline;color:#df6c20">CROWN OF THORNS</span>: Social Home.</h2>
+            <p class="caption">Home | About Us | Login | Contact</p>
+        </div>
+      </div>
+      
+</body>
+</html>
