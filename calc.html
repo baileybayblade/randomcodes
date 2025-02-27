@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidCal</title>
+    <style>
+        html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: antiquewhite;
+}   
+
+.wrapper {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #000;
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+    width: 90%;
+    max-width: 400px; /* Limit calculator width */
+    margin-top: 20px;
+}
+
+.main {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 5px 30px rgba(35, 35, 35, 0.1);
+    color: #000;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width: 100%;
+    font-size: 2em;
+}
+
+.row-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.button {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #000;
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+}
+
+.button:last-child {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #fff;
+    background-color: #ffa84c;
+}
+
+.button:last-child:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+.button:hover {
+    background-color: inherit;
+}
+
+.button:active {
+    background-color: #eb92be;
+}
+
+.button.double {
+    flex-basis: 50%;
+}
+
+.button.triple {
+    flex-basis: 70%;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #234d6e;
+    padding: 20px;
+    color: white;
+    margin-top: 30px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: flex;
+}
+
+input[type=submit] {
+    background-color: #e3325e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #cd3259;
+}
+
+#greeting {
+    background-color: blanchedalmond;
+    color: #000;
+    padding: 20px;
+    margin: 10px;
+    font-family:  Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr; /* stack form elements */
+    }
+    .container label {
+        text-align: left; /* align labels to the left on small screens */
+    }
+    .button {
+        padding: 10px; /* smaller button padding */
+        font-size: 1.2em; /* smaller button font size */
+    }
+    .main {
+        padding: 15px;
+        font-size: 1.5em;
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+    <form class="container">
+        <div class="row"></div>
+            <div class="col-25">
+        <label for="name">Name:</label>
+            </div>
+        <input type="text" id="name" name="name" placeholder="Your name..."><br><br>
+            <div class="col-25">
+        <label for="age">Age:</label>
+            </div>
+        <input type="text" id="age" name="age" placeholder="Your age..."><br><br>
+
+        <label for="theme">Theme:</label>
+        <select id="theme" name="theme">
+            <option value="space">Space</option>
+            <option value="skies">Skies</option>
+            <option value="forest">Forest</option>
+        </select><br><br>
+        <input type="submit">
+    </form>
+    <br>
+    <div id="greeting">
+        <p></p>
+        <p>Number of correct answers: 0</p>
+    </div>
+    <br>
+    <div class="wrapper">
+        <section class="main">
+            0
+        </section>
+
+        <section class="buttons">
+            <div class="row-button">
+                <button class="button double">
+                    C
+                </button>
+                <button class="button">
+                    &larr;
+                </button>
+                <button class="button">
+                    &divide;
+                </button>
+            </div>
+
+            <div class="row-button">
+                <button class="button">
+                    7
+                </button>
+                <button class="button">
+                    8
+                </button>
+                <button class="button">
+                    9
+                </button>
+                <button class="button">
+                    &times;
+                </button>
+            </div>
+
+            <div class="row-button">
+                <button class="button">
+                    4
+                </button>
+                <button class="button">
+                    5
+                </button>
+                <button class="button">
+                    6
+                </button>
+                <button class="button">
+                    &minus;
+                </button>
+            </div>
+
+            <div class="row-button">
+                <button class="button">
+                    1
+                </button>
+                <button class="button">
+                    2
+                </button>
+                <button class="button">
+                    3
+                </button>
+                <button class="button">
+                    &plus;
+                </button>
+            </div>
+
+            <div class="row-button">
+                <button class="button triple">
+                    0
+                </button>
+                <button class="button">
+                    &equals;
+                </button>
+            </div>
+        </section>
+    </div>
+<script src="assets/kidcalcs.js"></script>
+</body>
+</html>
