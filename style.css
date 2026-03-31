@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Quintessential&display=swap');
+
+::-webkit-scrollbar {
+  width: 20px;
+  height: 7px;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  background-image: url(https://www.snazzyspace.com/images/arrowdown.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: inset 0 0 16px rgba(214, 214, 214, 0.9);
+}
+
+::-webkit-scrollbar-button:start:decrement {
+  background-image: url(https://www.snazzyspace.com/images/arrowup.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: inset 0 0 16px rgba(214, 214, 214, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  background: url(https://www.snazzyspace.com/defaultimages/375436_floral.gif);
+  background-size: 400% auto;
+  border-left: 0px solid #E5E5E5;
+  border-right: 0px solid #E5E5E5;
+  border-bottom: 0px solid #E5E5E5;
+  border-top: 0px solid #E5E5E5;
+  border-radius: 0%;
+}
+
+#scrollbardolliecrave {
+  width: 96px;
+  height: 20px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: url(https://www.snazzyspace.com/images/track.png);
+  border-radius: 0%;
+}
+
+body {
+  /*background-color: #eddabc; 
+  background-image: url("https://files.catbox.moe/8ydy9n.jpg");*/
+  background-image: url("https://i.pinimg.com/1200x/66/3f/b2/663fb274e1b369b8a3722138f27f19ef.jpg");
+  background-size: contain;
+  height: 100%;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: absolute;
+  min-width: 1280px;
+  width: 100%;
+  height: 44px;
+  z-index: -2;
+  background-image: url('lace1.png');
+  background-size: contain;
+  top: -8px;
+  left: 0;
+  background-repeat: repeat-x, no-repeat;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.208)) drop-shadow(-1px 1px 0 rgba(0, 0, 0, 0.208)) drop-shadow(0 2px 0 rgba(0, 0, 0, 0.208)) drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.208)) drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.208)) drop-shadow(0 -1px 1.5px rgba(0, 0, 0, 0.208)) drop-shadow(1px -1px 1.5px rgba(0, 0, 0, 0.208)) drop-shadow(-1px -1px 1.5px rgba(0, 0, 0, 0.208));
+}
+
+* {
+  box-sizing: border-box;
+  cursor: url('https://www.snazzyspace.com/cursorsfolder/dove.png'), auto;
+}
+
+a,
+a:hover {
+  cursor: url(bellred.png), auto !important;
+}
+
+.parent {
+  border: 2px solid #577378;
+  border-radius: 6px;
+  padding: 4px;
+  margin: 50px;
+  margin-top: 70px;
+  background-color: #bad5b6;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  position: relative;
+  width: 1280px;
+}
+
+.head {
+  grid-area: 1 / 1 / 2 / 6;
+  padding: 4px 0 80px 0;
+  border-radius: 9px;
+  margin: 5px;
+  margin-bottom: 20px;
+  background-image: url('https://i.pinimg.com/1200x/9c/e1/0d/9ce10d3128893b2952b51b8770235c08.jpg');
+  background-size: contain;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.button {
+  filter: drop-shadow(1px 1px 0px black) drop-shadow(-1px -1px 0px black);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: url('bellred.png'), auto !important;
+}
+
+.button:hover {
+  transform: translateY(-7px);
+  cursor: url('bellred.png'), auto !important;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background-image: url('llace.png');
+  background-repeat: repeat-x;
+  z-index: 1;
+  filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2) brightness(1.1);
+}
+
+.bod2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background-image: url('llace.png');
+  background-repeat: repeat-x;
+  z-index: 1;
+  filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2) brightness(1.1);
+}
+
+
+.head>p {
+  position: absolute;
+  color: #E39786;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+  bottom: 12px;
+  right: 280px;
+  text-align: center;
+  font-family: "Jacquard 24", Quintessential, times;
+  padding: 0;
+  margin: 0;
+  font-size: 140px;
+  line-height: 0.5;
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.head>p:hover {
+  transform: translateY(-7px);
+}
+
+.bod {
+  grid-area: 3 / 2 / 5 / 5;
+  border-radius: 9px;
+  margin: 5px;
+  margin-top: 0;
+  position: relative;
+  padding: 10px;
+}
+
+.bod2 {
+  grid-area: 5 / 2 / 7 / 5;
+  border-radius: 9px;
+  margin: 5px;
+  margin-top: 0;
+  position: relative;
+  padding: 10px;
+}
+
+.nav {
+  grid-area: 3 / 1 / 4 / 2;
+  background-image: url(https://i.pinimg.com/1200x/95/87/f2/9587f2ee72a06bb8227e9443ab80ef54.jpg);
+  background-size: cover;
+  border-radius: 9px;
+  margin: 5px;
+  margin-top: 0;
+  /* border-image: url(https://files.catbox.moe/t2pusf.gif) 12 fill round; !important */
+
+}
+
+.changes {
+  grid-area: 4 / 1 / 6 / 2;
+  border-radius: 9px;
+  margin: 5px;
+  position: relative;
+}
+
+.recent {
+  font-family: "Jacquard 24", Quintessential, times;
+  position: absolute;
+  color: #E39786;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 55px;
+  margin: 0;
+  pointer-events: none;
+  top: -35px;
+}
+
+.cboox {
+  grid-area: 3 / 5 / 4 / 6;
+  position: relative;
+  border-radius: 9px;
+  margin: 5px;
+  margin-top: 0;
+  background-color: rgb(255, 243, 235);
+  border: 2px ridge #825144;
+  -webkit-box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.51);
+  box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.51);
+}
+
+.chat {
+  font-family: "Jacquard 24", Quintessential, times;
+  position: absolute;
+  color: #E39786;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 55px;
+  margin: 0;
+  pointer-events: none;
+  top: -31px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.bod::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background-image: url('llace.png');
+  background-repeat: repeat-x;
+  z-index: 1;
+  filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2) brightness(1.1);
+}
+
+
+.misc {
+  grid-area: 4 / 5 / 6 / 6;
+  margin: 5px;
+  border-radius: 9px;
+  background-image: url(https://i.pinimg.com/1200x/05/29/c5/0529c53e2b3440b3fadadabccec86b06.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: 7 / 1 / 9 / 6;
+  border-radius: 9px;
+  margin: 5px;
+  /* border: 17px solid transparent; !important
+  border-image: url("https://sugarfantasies.neocities.org/index/laceb.webp") 7 round; !important*/
+}
+
+.footer > p {
+  font-family: "Jacquard 24", Quintessential, times;
+  color: #E39786;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  margin: 0;
+  pointer-events: none;
+  text-align: center;
+}
+
+p {
+  color: black;
+  font-family: Quintessential, "Times New Roman";
+}
+
+.navhead {
+  background-size: 50%;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  padding: 5px;
+  height: 54px;
+  padding-bottom: 0;
+  background-image: url(https://i.pinimg.com/736x/00/99/9f/00999ff0e73c197d2b8dfda5eb85fece.jpg);
+  background-size: cover;
+  border: 2px solid #310E10;
+  border-bottom: none;
+  -webkit-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.6);
+}
+
+.nav-inner {
+  border-radius: 5px;
+  height: 34px;
+  padding: 5px;
+  margin-top: 3.5px;
+  padding-bottom: 12px;
+  background-color: white;
+  font-size: 28px;
+  font-family: "Jacquard 24", Quintessential, "Times New Roman";
+  filter: drop-shadow(0px 0px 2px black);
+}
+
+.buttons {
+  margin: 10px;
+  text-align: center;
+  border-width: 2px;
+  border-style: inset;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(#dadcde, white 50%, #dadcde 50%, white);
+  filter: drop-shadow(0px 0px 2px gray);
+  width: max-width;
+
+}
+
+.button-nav {
+  color: #9c3b21;
+  font-family: "Jacquard 24", Quintessential, Times;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.button-nav:hover {
+  color: #ed9f18;
+  font-style: italic;
+}
+
+.bod,
+.nav,
+.changes,
+.misc,
+.footer,
+.head,
+.under-changes,
+.bod2,
+.misc2 {
+  background-color: #eddabc;
+  border: 2px ridge #825144;
+  -webkit-box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.51);
+  box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.51);
+}
+
+::selection {
+  /* Change highlight background color */
+  background: rgb(92, 125, 71);
+  /* Change highlight text color */
+  color: #FFFFFF;
+}
+
+.blinkie-bar {
+  grid-area: 2 / 1 / 2 / 6;
+  margin: 0;
+  text-align: center;
+}
+
+img.butler {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 120px;
+  z-index: 9999;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+img.butler:hover {
+  transform: translateY(-7px);
+}
+
+img.head-butler {
+  position: absolute;
+  top: -13px;
+  left: 19%;
+  width: 410px;
+  z-index: 9999;
+}
+
+img.ata {
+  z-index: 99;
+  width: 110px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2) brightness(1.1);
+  cursor: url(bellred.png), auto !important;
+}
+
+img.ata:hover {
+  transform: translateY(-7px);
+  cursor: url(bellred.png), auto !important;
+}
+
+p.ata {
+  font-family: "Jacquard 24", Quintessential, times;
+  position: absolute;
+  color: #E39786;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 58px;
+  margin: 0;
+  pointer-events: none;
+  top: -30px;
+  z-index: 2;
+
+}
+
+marquee {
+  margin: 0;
+  padding: 0;
+  filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2) brightness(1.1);
+  transition: filter 0.4s ease;
+}
+
+marquee:hover {
+  filter: none;
+}
+
+/* atabook hovering tooltip code below */
+
+#follow-tooltip {
+  position: fixed;
+  display: none;
+  background: #A5B391;
+  color: #493e3d;
+  padding: 5px 10px;
+  border: 3px outset #3b3e36;
+  border-radius: 6px;
+  font-family: "Jacquard 24", Quintessential, times;
+  font-size: 23px;
+  -webkit-box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.51);
+  box-shadow: 4px 2px 6px 0px rgba(0, 0, 0, 0.51);
+  pointer-events: none;
+  z-index: 9999;
+  max-width: 200px;
+}
+
+.target-img {
+  cursor: url('https://www.snazzyspace.com/cursorsfolder/dove.png'), auto !important;
+}
+
+/* end code */
+
+.boxc {
+  background-image: url(https://i.pinimg.com/1200x/05/29/c5/0529c53e2b3440b3fadadabccec86b06.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 9px;
+  filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2);
+  transition: 0.3s ease
+}
+
+.boxc:hover {
+  filter: none;i
+}
+
+.inbody {
+  border: 2px solid black;
+  width: 20%;
+}
+
+.bod > p > a {
+  font-family: "Jacquard 24", Quintessential, times;
+  font-size: 23px;
+  color:#a24e4e;
+  text-decoration: none;
+}
+
+.under-changes {
+  grid-area: 6 / 1 / 7 / 2;
+  border-radius: 9px;
+  margin: 5px;
+  margin-top: 0;
+  height: 360px;
+  position: relative;
+  padding: 10px;
+  background-image: url(https://i.pinimg.com/1200x/05/29/c5/0529c53e2b3440b3fadadabccec86b06.jpg);
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.misc2 {
+  grid-area: 6 / 5 / 7 / 6;
+  border-radius: 9px;
+  margin: 5px;
+  margin-top: 0;
+  position: relative;
+  padding: 25px 5px 5px 5px;
+  height: 360px;
+  background-image: url(https://i.pinimg.com/1200x/95/87/f2/9587f2ee72a06bb8227e9443ab80ef54.jpg);
+  background-size: cover;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.misc2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background-image: url('llace.png');
+  background-repeat: repeat-x;
+  z-index: 1;
+  pointer-events: none;
+  filter: sepia(0.8) hue-rotate(-15deg) saturate(1.2) brightness(1.1);
+}
+
+.todo {
+  font-family: "Jacquard 24", Quintessential, times;
+  position: absolute;
+  color: #E39786;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 56px;
+  margin: 0;
+  pointer-events: none;
+  top: 67%;
+  z-index: 1;
+  opacity: 1;
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333333;
+  color: #333333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr::after {
+  background: transparent;
+  content: "✦";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+
+.coolios {
+  border: 2px solid #455153;
+  border-radius: 6px;
+  background-color: #bad5b6;
+  padding: 5px 0 0 0;
+}
+
+.coolios a {
+  cursor: url('bellred.png'), auto !important;
+}
+
+.coolios a img {
+  cursor: url('bellred.png'), auto !important;
+}
